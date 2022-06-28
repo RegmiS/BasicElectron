@@ -10,7 +10,7 @@ const loadMainWindow = () => {
         }
     });
 
-    mainWindow.loadFile(path.join(__dirname, "index.html"));
+    mainWindow.loadFile(path.join(__dirname, "home.html"));
 };
 
 app.on("ready", loadMainWindow);
