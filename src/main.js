@@ -1,4 +1,6 @@
-const { app, BrowserWindow } = require("electron");
+// const { app, BrowserWindow, ipcMain, Notification } = require("electron");
+import {app, BrowserWindow, ipcMain, Notification} from 'electron';
+
 const path = require("path");
 
 const loadMainWindow = () => {
@@ -26,4 +28,12 @@ app.on("activate", () => {
         loadMainWindow();
     }
 });
-  
+
+ipcMain.handle('show-notification', (event, ...args) => {
+    const notification = {
+        title: 'New Task',
+        body: `Added: ${args[0]}`
+    };
+
+    new Notification(notification).show();
+});

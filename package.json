@@ -11,6 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/RegmiS/BasicElectron.git"
   },
+  "type": "module",
   "keywords": [],
   "author": "",
   "license": "ISC",
