@@ -1,5 +1,6 @@
 // const { app, BrowserWindow, ipcMain, Notification } = require("electron");
-import {app, BrowserWindow, ipcMain, Notification} from 'electron';
+const { app, BrowserWindow, ipcMain, Notification } = require("electron");
+
 
 const path = require("path");
 
@@ -33,7 +34,7 @@ ipcMain.handle('show-notification', (event, ...args) => {
     const notification = {
         title: 'New Task',
         body: `Added: ${args[0]}`
-    };
+    }
 
-    new Notification(notification).show();
+    new Notification(notification).show()
 });
